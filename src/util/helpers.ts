@@ -37,8 +37,10 @@ export const setupView = (
   // view.webContents.userAgent = ua.replace(/Electron\/.* /, "");
   // console.log("ne", view.webContents.userAgent);
   win.on("resize", onResize);
-  win.on("closed", () => {
-    win.off("resize", onResize);
-  });
+  // win.on("closed", () => {
+  //   if (win) {
+  //     win.off("resize", onResize);
+  //   }
+  // });
   return view;
 };
